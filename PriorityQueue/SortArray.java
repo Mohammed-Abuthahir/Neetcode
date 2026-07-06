@@ -16,7 +16,7 @@ class SortArray{
         // }
 
         // max Heap
-        PriorityQueue <Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue <Integer> queue =  new PriorityQueue<>(Collections.reverseOrder());
         for(int num : nums){
             queue.add(num);
         }
