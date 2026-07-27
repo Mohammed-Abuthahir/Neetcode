@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 class countBits{
     public static int[] countingbits(int n){
-        int[] nums = new int[n + 1];
-        for(int i = 0;i <= n; i++) nums[i] = Integer.bitCount(i);
+        int[] nums = new int[n];
+        for(int i = 0;i < n; i++) nums[i] = Integer.bitCount(i);
         return nums;
     }
     public static void main(String[] args){
