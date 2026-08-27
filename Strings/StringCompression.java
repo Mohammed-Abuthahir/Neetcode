@@ -10,13 +10,13 @@ class StringCompression{
         for(int i = 0;i < s.length(); i++){
             if(i == s.length() - 1){
                 sb.append(s.charAt(i));
-                sb.append(count);
+                if(count != 1) sb.append(count);
                 break;
             }
             if(s.charAt(i) == s.charAt(i + 1)) count++;
             else{
                 sb.append(s.charAt(i));
-                sb.append(count);
+                if(count != 1) sb.append(count);
                 count = 1;
             }
         }
