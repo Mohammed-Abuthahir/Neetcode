@@ -9,12 +9,12 @@ class validParanthesis{
             if(c == '(' || c == '[' || c == '{') stack.push(c);
             else {
                 if(stack.isEmpty()) return false;
-                if((c == ')' && stack.pop() != '(') ||
-                (c == '}' && stack.pop() != '{') || (c == ']' &&
-                stack.pop() != '[')) return false;
+                if((c == ')' && stack.pop() != '(') || (c == ']' && stack.pop() != '[') || c == '}' && stack.pop() != '{'){
+                    return false;
+                }
             }
         }
-        return stack.isEmpty();
+         return true;
     }
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
