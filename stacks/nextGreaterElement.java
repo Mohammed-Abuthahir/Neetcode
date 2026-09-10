@@ -1,4 +1,4 @@
-// Next Greater Element 
+// Next Greater Element I
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
