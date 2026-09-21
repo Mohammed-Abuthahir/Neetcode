@@ -11,11 +11,11 @@ class maxDepth{
             this.val = val;
         }
     }
-    public static int recursive(TreeNode root){
-        if(root == null) return 0;
-        return 1 + Math.max(recursive(root.left), recursive(root.right));
-    }
     public static int dfs(TreeNode root){
+        if(root == null) return 0;
+        return 1 + Math.max(dfs(root.left), dfs(root.right));
+    }
+    public static int bfs(TreeNode root){
         if(root == null) return 0;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
@@ -40,8 +40,8 @@ class maxDepth{
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
         root.right.left = new TreeNode(4);
-        int result = dfs(root);
-        int result1 = recursive(root);
+        int result = bfs(root);
+        int result1 = dfs(root);
         System.out.println("Recursion Result :"+result1);
         System.out.println("Depth first Search Result :"+result);
     }
