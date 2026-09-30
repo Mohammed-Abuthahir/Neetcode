@@ -33,7 +33,7 @@ class removeElements{
         head.next.next.next.next.next.next = new ListNode(6);
         int val = 6;
         ListNode result = removeElements(head, val);
-        display(head);
+        display(result);
     }
     public static void display(ListNode head){
         while(head != null){
