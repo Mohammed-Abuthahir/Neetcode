@@ -7,9 +7,9 @@ class designLRUCache{
         LRUCache LRUCache = new LRUCache(2);
         LRUCache.put(1,1);
         LRUCache.put(2,2);
-        System.out.println(LRUCache.get(1));
-        LRUCache.put(3,3);
         System.out.println(LRUCache.get(2));
+        LRUCache.put(3,3);
+        System.out.println(LRUCache.get(1));
         LRUCache.put(4,4);
         System.out.println(LRUCache.get(1));
         System.out.println(LRUCache.get(3));
