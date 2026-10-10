@@ -11,18 +11,13 @@ class middleNode{
         }
     }
     public static ListNode middleNodes(ListNode head){
-        ListNode curr = head;
-        int length = 0;
-        while(curr != null){
-            length++;
-            curr = curr.next;
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
         }
-        length = length / 2;
-        while(length != 0){
-            length--;
-            head = head.next;
-        }
-        return head;
+        return slow;
     }
     public static void main(String[] args){
         ListNode node = new ListNode(1);
@@ -31,13 +26,7 @@ class middleNode{
         node.next.next.next = new ListNode(4);
         node.next.next.next.next = new ListNode(5);
         ListNode result = middleNodes(node);
-        DisplayLinkedList(result);
+        System.out.println(result.val);
     }
-    public static void DisplayLinkedList(ListNode node){
-        ListNode current = node;
-        while(current != null){
-            System.out.print(current.val + " --> ");
-            current = current.next;
-        }
-    }
+   
 }
